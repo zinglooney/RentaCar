@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FirstScreen">
+
+    <EditText
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/customer_name"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/datepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/date_picker"
+            android:importantForAutofill="no"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="no"
+            android:ems="10"
+            android:hint="@string/time_picker"
+            android:inputType="time" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/listMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_type" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:ems="10"
+        android:hint="@string/duration"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/location_receip_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/location_receipt_options" />
+
+        <RadioButton
+            android:id="@+id/portofpatra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/portofpatra" />
+
+        <RadioButton
+            android:id="@+id/ktelstation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ktelstation" />
+
+        <RadioButton
+            android:id="@+id/companyoffice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/companyoffice" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rent_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rent_options" />
+
+        <RadioButton
+            android:id="@+id/extra_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/extra_insurance" />
+
+        <RadioButton
+            android:id="@+id/gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gps" />
+
+        <RadioButton
+            android:id="@+id/roadside_assistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/roadside_assistance" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="saveButton"
+        android:hint="@string/save_button" />
+
+</LinearLayout>

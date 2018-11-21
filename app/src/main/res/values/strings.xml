@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CarRental</string>
+    <string name="customer_name">Ονοματεπώνυμο</string>
+    <string name="date_picker">Ημερομηνία</string>
+    <string name="time_picker">Ώρα</string>
+    <string name="car_type">Τύπος Αυτοκινήτου</string>
+    <string name="duration">Ημέρες Ενοικίασης</string>
+    <string name="extra_insurance">Έξτρα ασφάλιση</string>
+    <string name="gps">GPS</string>
+    <string name="roadside_assistance">Οδική βοήθεια</string>
+    <string name="save_button">Αποθήκευση</string>
+    <string name="portofpatra">Λιμάνι Πάτρας</string>
+    <string name="ktelstation">Σταθμός ΚΤΕΛ</string>
+    <string name="companyoffice">Γραφείο Εταιρείας</string>
+    <string name="location_receipt_options">Επιλογές Τοποθεσίας Παραλαβής</string>
+    <string name="rent_options">Επιλογές Ενοικίασης</string>
+</resources>

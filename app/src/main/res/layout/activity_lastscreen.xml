@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".LastScreen">
+
+    <TextView
+        android:id="@+id/tv_customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/customer_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/date_picker" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/time_picker" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_car_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/car_type" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/duration" />
+
+    <TextView
+        android:id="@+id/tv_location_receipt_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/location_receipt_options" />
+
+    <TextView
+        android:id="@+id/tv_rent_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rent_options" />
+
+</LinearLayout>

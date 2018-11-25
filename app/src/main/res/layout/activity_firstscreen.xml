@@ -15,26 +15,11 @@
         android:hint="@string/customer_name"
         android:inputType="textPersonName" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/btnDatePicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/date_picker" />
-
-        <Button
-            android:layout_weight="2"
-            android:id="@+id/btnTimePicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/time_picker" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_picker" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,9 +116,9 @@
 
     <Button
         android:id="@+id/save_button"
-        android:onClick="saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/save_button" />
+        android:hint="@string/save_button"
+        android:onClick="saveButton" />
 
 </LinearLayout>

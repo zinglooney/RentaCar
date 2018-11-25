@@ -23,8 +23,6 @@ public class FirstScreen extends ListActivity {
 
     private TextView lopt;
     private Button btndp;
-    private Button btntp;
-
 
 
     private String[] Car_type = {
@@ -46,7 +44,6 @@ public class FirstScreen extends ListActivity {
         setListAdapter(new ArrayAdapter <>(this,android.R.layout.simple_list_item_1, Car_type));
 
         btndp = findViewById(R.id.btnDatePicker);
-        btntp  = findViewById(R.id.btnTimePicker);
 
         btndp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +64,7 @@ public class FirstScreen extends ListActivity {
                 TimePickerDialog tpd = new TimePickerDialog(FirstScreen.this,new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timepicker, int mH, int mM) {
-                        btntp.setText(mH + ":" + mM);
+                        btndp.setText(btndp.getText() + " " + mH + ":" + mM);
                     }
                 }, hour, minute, true);
                tpd.show();
@@ -95,9 +92,6 @@ public class FirstScreen extends ListActivity {
         Button btnvd = findViewById(R.id.btnDatePicker);
         String btnvdcnt = btnvd.getText().toString();
 
-        Button btnvt = findViewById(R.id.btnTimePicker);
-        String btnvtcnt = btnvt.getText().toString();
-
         TextView ct = findViewById(R.id.listOption);
         String ctcnt = ct.getText().toString();
 
@@ -119,7 +113,6 @@ public class FirstScreen extends ListActivity {
         Intent intent = new Intent(this,LastScreen.class);
         intent.putExtra("CUSTOMER_NAME",cncnt);
         intent.putExtra("DATE",btnvdcnt);
-        intent.putExtra("TIME",btnvtcnt);
         intent.putExtra("CAR_TYPE", ctcnt);
         intent.putExtra("DURATION", drcnt);
         intent.putExtra("LOCATION_OPTION", lrocnt);

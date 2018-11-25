@@ -26,10 +26,6 @@ public class LastScreen extends AppCompatActivity {
         TextView tv_btnvd = findViewById(R.id.tv_date);
         tv_btnvd.setText(btnvdcnt);
 
-        String btnvtcnt = intent.getStringExtra("TIME");
-        TextView tv_btnvt = findViewById(R.id.tv_time);
-        tv_btnvt.setText(btnvtcnt);
-
         String ctcnt = intent.getStringExtra("CAR_TYPE");
         TextView tv_ct = findViewById(R.id.tv_car_type);
         tv_ct.setText(ctcnt);

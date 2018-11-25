@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FirstScreen">
 
@@ -10,7 +10,8 @@
         android:id="@+id/customer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints="no"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/customer_name"
         android:inputType="textPersonName" />
@@ -19,11 +20,13 @@
         android:id="@+id/btnDatePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="@string/date_picker" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -35,7 +38,7 @@
         <ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="50dp">
 
         </ListView>
 
@@ -45,7 +48,7 @@
         android:id="@+id/duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints="no"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/duration"
         android:inputType="number" />
@@ -53,7 +56,8 @@
     <RadioGroup
         android:id="@+id/lro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -79,13 +83,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/companyoffice" />
-
     </RadioGroup>
 
     <RadioGroup
         android:id="@+id/ro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -117,7 +121,7 @@
     <Button
         android:id="@+id/save_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:hint="@string/save_button"
         android:onClick="saveButton" />
 

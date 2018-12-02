@@ -21,10 +21,8 @@ import java.util.Calendar;
 
 public class FirstScreen extends ListActivity {
 
-    private TextView lopt;
     private Button btndp;
-
-
+    private TextView lopt;
     private String[] Car_type = {
             "Class A",
             "Class B",
@@ -33,15 +31,10 @@ public class FirstScreen extends ListActivity {
             "Class E"
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstscreen);
-
-
-        lopt = (TextView)findViewById(R.id.listOption);
-        setListAdapter(new ArrayAdapter <>(this,android.R.layout.simple_list_item_1, Car_type));
 
         btndp = findViewById(R.id.btnDatePicker);
 
@@ -49,32 +42,34 @@ public class FirstScreen extends ListActivity {
             @Override
             public void onClick(View v) {
                 Calendar c = Calendar.getInstance();
-                int day = c.get(Calendar.DAY_OF_MONTH);
+                int year = c.get(Calendar.YEAR);
                 int month = c.get(Calendar.MONTH);
-                int year = c.get((Calendar.YEAR));
+                int day = c.get(Calendar.DAY_OF_MONTH);
                 int hour = c.get(Calendar.HOUR_OF_DAY);
                 int minute = c.get(Calendar.MINUTE);
 
+
                 DatePickerDialog dpd = new DatePickerDialog(FirstScreen.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
-                    public void onDateSet(DatePicker datepicker, int mYear, int mMonth, int mDay) {
+                    public void onDateSet(DatePicker v, int mYear, int mMonth, int mDay) {
                         btndp.setText(mDay + "/" + (mMonth+1) + "/" + mYear);
                     }
-                }, day, month, year);
+                }, year, month, day);
+
                 TimePickerDialog tpd = new TimePickerDialog(FirstScreen.this,new TimePickerDialog.OnTimeSetListener() {
                     @Override
-                    public void onTimeSet(TimePicker timepicker, int mH, int mM) {
+                    public void onTimeSet(TimePicker v, int mH, int mM) {
                         btndp.setText(btndp.getText() + " " + mH + ":" + mM);
                     }
                 }, hour, minute, true);
+
                tpd.show();
                dpd.show();
-
-
-
             }
         });
 
+        lopt = findViewById(R.id.listOption);
+        setListAdapter(new ArrayAdapter <>(this,android.R.layout.simple_list_item_1, Car_type));
     }
 
     @Override
@@ -98,17 +93,15 @@ public class FirstScreen extends ListActivity {
         EditText dr = findViewById(R.id.duration);
         String drcnt = dr.getText().toString();
 
-
-        RadioGroup rgplro = (RadioGroup) findViewById(R.id.lro);
+        RadioGroup rgplro = findViewById(R.id.lro);
         int radioButtonIDlro = rgplro.getCheckedRadioButtonId();
-        RadioButton rbtnlro = (RadioButton) rgplro.findViewById(radioButtonIDlro);
+        RadioButton rbtnlro = rgplro.findViewById(radioButtonIDlro);
         String lrocnt = (String) rbtnlro.getText();
 
-        RadioGroup rgpro = (RadioGroup) findViewById(R.id.ro);
+        RadioGroup rgpro = findViewById(R.id.ro);
         int radioButtonIDro = rgpro.getCheckedRadioButtonId();
-        RadioButton rbtnro = (RadioButton) rgpro.findViewById(radioButtonIDro);
+        RadioButton rbtnro = rgpro.findViewById(radioButtonIDro);
         String rocnt = (String) rbtnro.getText();
-
 
         Intent intent = new Intent(this,LastScreen.class);
         intent.putExtra("CUSTOMER_NAME",cncnt);
